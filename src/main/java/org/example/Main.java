@@ -6,6 +6,9 @@ import com.github.lalyos.jfiglet.FigletFont;
 
 import java.io.IOException;
 
+import static java.lang.IO.println;
+import static java.lang.IO.readln;
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -123,6 +126,11 @@ public class Main {
                     + e.getMessage());
         }
 
-        System.out.println("\nSimulazione terminata.");
+        Utente n = new Utente(0005, readln("Inserisci il tuo nome: "),
+                readln("Inserisci la tua email: "),
+                readln("Inserisci il tuo codice fiscale: "),
+                Double.parseDouble(readln("Inserisci il tuo credito: "))
+        );
+        println("Benvenuto " + n.getNome() + "! Il tuo credito è: " + n.getCredito() + "€");
     }
 }

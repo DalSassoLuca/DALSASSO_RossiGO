@@ -19,6 +19,10 @@ public class Utente {
         this.credito = credito;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public int getId() {
         return id;
     }
@@ -37,5 +41,9 @@ public class Utente {
 
     public void setCredito(double credito) {
         this.credito = credito;
+    }
+
+    public void NextId() {
+        this.id++;
     }
 }
